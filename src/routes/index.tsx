@@ -3,6 +3,27 @@ import { useEffect, useRef, useState } from "react";
 import portfolioHtml from "./portfolio-body.html?raw";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Alishba Sabir | Computer Science Student" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Alishba Sabir, a Computer Science student at UET Lahore passionate about programming, web development, databases, and Generative AI.",
+      },
+      {
+        property: "og:title",
+        content: "Alishba Sabir | Computer Science Student",
+      },
+      {
+        property: "og:description",
+        content:
+          "Portfolio of Alishba Sabir, a Computer Science student at UET Lahore passionate about programming, web development, databases, and Generative AI.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
