@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-// @ts-expect-error Vite raw import
 import portfolioHtml from "./portfolio-body.html?raw";
 
 export const Route = createFileRoute("/")({
