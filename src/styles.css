@@ -93,3 +93,4 @@
 .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .skill-chip{display:inline-block;border-radius:.5rem;border:1px solid var(--color-border);background:var(--surface-2);padding:.375rem .75rem;font-size:.875rem;line-height:1.25rem;color:var(--muted-foreground,var(--color-foreground));transition:border-color .3s,color .3s,transform .3s}
 .skill-chip:hover{border-color:oklch(66% .2 288/.45);color:var(--violet);transform:translateY(-1px)}
+@media (width>=64rem){.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}
