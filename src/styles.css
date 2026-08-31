@@ -91,6 +91,12 @@
 /* Skills & Expertise additions */
 .w-12{width:3rem}
 .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-.skill-chip{display:inline-block;border-radius:.5rem;border:1px solid var(--color-border);background:var(--surface-2);padding:.375rem .75rem;font-size:.875rem;line-height:1.25rem;color:var(--muted-foreground,var(--color-foreground));transition:border-color .3s,color .3s,transform .3s}
-.skill-chip:hover{border-color:oklch(66% .2 288/.45);color:var(--violet);transform:translateY(-1px)}
-@media (width>=64rem){.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.skills-list{display:grid;gap:1rem}
+.skills-list .skill-chip{display:grid;grid-template-columns:1fr;gap:.5rem;padding:0;border:0;border-radius:0;background:transparent;font-size:.9375rem;line-height:1.35;color:var(--muted-foreground,var(--color-foreground));transition:color .3s}
+.skills-list .skill-chip::after{content:"";display:block;width:var(--skill-level,78%);height:.375rem;border-radius:999px;background-image:var(--gradient-primary);box-shadow:0 0 14px oklch(66% .2 288/.16);transform-origin:left;transition:width .35s ease,filter .3s ease}
+.skills-list .skill-chip:nth-child(3n+1){--skill-level:80%}
+.skills-list .skill-chip:nth-child(3n+2){--skill-level:74%}
+.skills-list .skill-chip:nth-child(3n){--skill-level:68%}
+.skills-list .skill-chip:hover{color:var(--color-foreground);transform:none}
+.skills-list .skill-chip:hover::after{filter:brightness(1.14)}
+@media (width>=64rem){.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}
